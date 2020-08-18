@@ -26,33 +26,16 @@ function setupModeButtons() {
       this.classList.add("selected");
       // this.textContent === "Easy" ? (numSquares = 3) : (numSquares = 6);
       if (this.textContent === "Easy") {
-        numSquares = 6;
-        squareContainer.classList.remove("wideContainer");
-        squareContainer.classList.remove("medContainer");
-        squares.forEach((i) => i.classList.remove("wideGrid"));
-        squares.forEach((i) => i.classList.remove("medGrid"));
+        easyGame();
       } else if (this.textContent === "Medium") {
-        numSquares = 14;
-        squareContainer.classList.add("medContainer");
-        squares.forEach((i) => i.classList.remove("wideGrid"));
-        squares.forEach((i) => i.classList.add("medGrid"));
+        medGame();
       } else if (this.textContent === "Hard") {
-        numSquares = 30;
-        squareContainer.classList.add("wideContainer");
-        squareContainer.classList.remove("medContainer");
-        squares.forEach((i) => i.classList.add("wideGrid"));
-        squares.forEach((i) => i.classList.remove("medGrid"));
+        hardGame();
       }
       reset();
     });
   }
 }
-
-// if (modeButtons.textContent === "Hard") {
-//   squares.classList.add("wideGrid");
-// } else {
-//   squares.classList.remove("wideGrid");
-// }
 
 function setupSquares() {
   for (let i = 0; i < squares.length; i++) {
@@ -94,16 +77,28 @@ function reset() {
   h1.style.backgroundColor = "steelblue";
 }
 
-// easyBtn.addEventListener("click", function () {
-//   easyBtn.classList.add("selected");
-//   hardBtn.classList.remove("selected");
-//   easyGame();
-// });
-// hardBtn.addEventListener("click", function () {
-//   hardBtn.classList.add("selected");
-//   easyBtn.classList.remove("selected");
-//   hardGame();
-// });
+function easyGame() {
+  numSquares = 6;
+  squareContainer.classList.remove("wideContainer");
+  squareContainer.classList.remove("medContainer");
+  squares.forEach((i) => i.classList.remove("wideGrid"));
+  squares.forEach((i) => i.classList.remove("medGrid"));
+}
+
+function medGame() {
+  numSquares = 14;
+  squareContainer.classList.add("medContainer");
+  squares.forEach((i) => i.classList.remove("wideGrid"));
+  squares.forEach((i) => i.classList.add("medGrid"));
+}
+
+function hardGame() {
+  numSquares = 30;
+  squareContainer.classList.add("wideContainer");
+  squareContainer.classList.remove("medContainer");
+  squares.forEach((i) => i.classList.add("wideGrid"));
+  squares.forEach((i) => i.classList.remove("medGrid"));
+}
 
 resetButton.addEventListener("click", function () {
   reset();
