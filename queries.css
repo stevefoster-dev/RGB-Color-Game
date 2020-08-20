@@ -1,0 +1,72 @@
+@media only screen and (max-width: 580px) {
+  h1 {
+    font-size: 150%;
+  }
+}
+@media only screen and (max-width: 528px) {
+  button {
+    border-style: none;
+    margin: 0;
+    padding-left: 20%;
+    display: block;
+    height: 30px;
+  }
+  h1 {
+    font-size: 130%;
+  }
+  .square {
+    padding-bottom: 100px;
+  }
+  .container {
+    max-width: 80%;
+  }
+  .medContainer {
+    margin: 20px auto;
+    max-width: 90%;
+  }
+  .medGrid {
+    padding-bottom: 55px;
+    width: 22%;
+    float: left;
+    margin: 1.5%;
+  }
+  .wideGrid {
+    width: 19.9%;
+    padding-bottom: 10px;
+    float: left;
+    margin: 1% 2.5%;
+  }
+
+  #message {
+    float: right;
+    padding-right: 20%;
+    font-size: 150%;
+  }
+
+  #stripe {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  h1 {
+    font-size: 120%;
+  }
+  button {
+    padding-left: 10%;
+  }
+  .medGrid {
+    padding-bottom: 40px;
+  }
+  .wideGrid {
+    width: 22%;
+    padding-bottom: 10px;
+    float: left;
+    margin: 1.3%;
+  }
+}
+@media only screen and (max-width: 280px) {
+  h1 {
+    font-size: 100%;
+  }
+}

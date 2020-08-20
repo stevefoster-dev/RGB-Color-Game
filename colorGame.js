@@ -86,14 +86,14 @@ function easyGame() {
 }
 
 function medGame() {
-  numSquares = 14;
+  numSquares = 12;
   squareContainer.classList.add("medContainer");
   squares.forEach((i) => i.classList.remove("wideGrid"));
   squares.forEach((i) => i.classList.add("medGrid"));
 }
 
 function hardGame() {
-  numSquares = 30;
+  numSquares = 32;
   squareContainer.classList.add("wideContainer");
   squareContainer.classList.remove("medContainer");
   squares.forEach((i) => i.classList.add("wideGrid"));
