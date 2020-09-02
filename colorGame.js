@@ -62,7 +62,7 @@ function reset() {
   // pick new random color from array
   pickedColor = pickColor();
   // change color display to match picked color
-  colorDisplay.textContent = pickColor();
+  colorDisplay.textContent = pickedColor;
   resetButton.textContent = "New Colors";
   messageDisplay.textContent = "";
   // change color of squares
